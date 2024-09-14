@@ -28,7 +28,7 @@ const Hero = () => {
         </h1>
         <div className="flex space-x-4 mt-8">
           <a
-            href="/Melvin_Bonde_CV.pdf"
+            href="/my-portfolio/Melvin_Bonde_CV.pdf"
             download="Melvin_Bonde_CV.pdf"
             className="rounded-md"
           >
