@@ -3,6 +3,8 @@ import { MapPin } from "lucide-react";
 import { Phone } from "lucide-react";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+  
   return (
     <footer className="font-montserrat bg-gray-800 text-white py-8">
       <div className="container mx-auto px-4">
@@ -62,6 +64,9 @@ const Footer = () => {
               Download CV
             </a>
           </div>
+        </div>
+        <div className="mt-8 text-center text-sm">
+          &copy; {year} Melvin Bonde. All rights reserved.
         </div>
       </div>
     </footer>
