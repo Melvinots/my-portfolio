@@ -9,13 +9,12 @@ const About = () => {
         </h1>
         <p className="font-montserrat text-lg md:text-xl text-justify py-6 leading-relaxed">
           I am a recent Computer Engineering graduate with a keen interest in
-          full-stack development. I am passionate about learning new tools and
+          backend development. I am passionate about learning new tools and
           technologies, as well as taking on new challenges.
           <br />
           <br />
           <span>
-            In my free time, I enjoy playing chess, which helps me enhance my
-            problem-solving and strategic thinking skills.
+            In my free time, I enjoy playing chess, as it keeps me mentally engaged and provides a fun challenge.
           </span>
         </p>
       </div>

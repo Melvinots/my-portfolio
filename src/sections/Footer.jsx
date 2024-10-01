@@ -57,8 +57,8 @@ const Footer = () => {
           <div className="flex flex-col space-y-4">
             <p>Feel free to reach out for collaboration or opportunities.</p>
             <a
-              href="/my-portfolio/MelvinBonde_CV.pdf"
-              download="MelvinBonde_CV.pdf"
+              href="/my-portfolio/Melvin_Bonde_CV.pdf"
+              download="Melvin_Bonde_CV.pdf"
               className="bg-[#0ad1c8] hover:bg-[#45dfb1] text-white py-2 px-4 rounded text-center"
             >
               Download CV

@@ -23,13 +23,13 @@ const Hero = () => {
           </span>
           <br />
           <span className="whitespace-nowrap">
-            Aspring Full-Stack Developer
+            Aspiring Backend Developer
           </span>
         </h1>
         <div className="flex space-x-4 mt-8">
           <a
-            href="/my-portfolio/MelvinBonde_CV.pdf"
-            download="MelvinBonde_CV.pdf"
+            href="/my-portfolio/Melvin_Bonde_CV.pdf"
+            download="Melvin_Bonde_CV.pdf"
             className="rounded-md"
           >
             <Button label="Download CV" Icon={Download} />
