@@ -23,18 +23,18 @@ const Hero = () => {
           </span>
           <br />
           <span className="whitespace-nowrap">
-            Aspiring Backend Developer
+            Aspiring Full Stack Developer
           </span>
         </h1>
         <div className="flex space-x-4 mt-8">
           <a
             href="/my-portfolio/Melvin_Bonde_CV.pdf"
             download="Melvin_Bonde_CV.pdf"
-            className="rounded-md"
+            className="focus:outline-0"
           >
             <Button label="Download CV" Icon={Download} />
           </a>
-          <a href="#contact" className="rounded-md">
+          <a href="#contact" className="focus:outline-0">
             <Button label="Contact Me" Icon={UserRoundPen} href="#contact" />
           </a>
         </div>
