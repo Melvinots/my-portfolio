@@ -7,13 +7,13 @@ const App = () => {
       <Nav />
       <section
         id="home"
-        className="sm:px-16 px-8 -mt-10 bg-slate-100 scroll-mt-16"
+        className="min-h-screen sm:px-16 px-8 -mt-10 bg-slate-100 scroll-mt-16"
       >
         <Hero />
       </section>
       <section
         id="about"
-        className="sm:px-16 px-8 py-10 bg-slate-200 scroll-mt-16"
+        className="min-h-[500px] sm:px-16 px-6 py-12 bg-slate-200 scroll-mt-5"
       >
         <About />
       </section>

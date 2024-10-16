@@ -1,3 +1,10 @@
+import { GraduationCap, BriefcaseBusiness } from 'lucide-react';
+
+const iconMap = {
+  GraduationCap,
+  BriefcaseBusiness
+};
+
 import {
   html,
   css,
@@ -20,6 +27,21 @@ export const navLinks = [
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
+
+export const attainments = [
+  {
+    title: "Education",
+    establishment: "Laguna State Polytechnic University",
+    role: "BS in Computer Engineering",
+    icon: iconMap.GraduationCap
+  },
+  {
+    title: "Internship",
+    establishment: "Creotec Philippines Inc.",
+    role: "Application Development Intern",
+    icon: iconMap.BriefcaseBusiness
+  }
+]
 
 export const projects = [
   {
