@@ -39,17 +39,17 @@ const Footer = () => {
             <h1 className="font-code mb-2">Contact Information</h1>
 
             <div className="flex items-center">
-              <Mail className="mr-2" />
+              <Mail className="mr-2 size-5" />
               <span>bonde.melvin03@gmail.com</span>
             </div>
 
             <div className="flex items-center">
-              <Phone className="mr-2" />
+              <Phone className="mr-2 size-5" />
               <span>+63-905-374-4469</span>
             </div>
 
             <div className="flex items-center">
-              <MapPin className="mr-2" />
+              <MapPin className="mr-2 size-5" />
               <span>Duhat Sta. Cruz, Laguna, Philippines</span>
             </div>
           </div>
@@ -57,8 +57,8 @@ const Footer = () => {
           <div className="flex flex-col space-y-4">
             <p>Feel free to reach out for collaboration or opportunities.</p>
             <a
-              href="/my-portfolio/Melvin_Bonde_CV.pdf"
-              download="Melvin_Bonde_CV.pdf"
+              href="/my-portfolio/MelvinBonde_CV.pdf"
+              download="MelvinBonde_CV.pdf"
               className="bg-[#0ad1c8] hover:bg-[#45dfb1] text-white py-2 px-4 rounded text-center"
             >
               Download CV

@@ -28,8 +28,8 @@ const Hero = () => {
         </h1>
         <div className="flex space-x-4 mt-8">
           <a
-            href="/my-portfolio/Melvin_Bonde_CV.pdf"
-            download="Melvin_Bonde_CV.pdf"
+            href="/my-portfolio/MelvinBonde_CV.pdf"
+            download="MelvinBonde_CV.pdf"
             className="focus:outline-0"
           >
             <Button label="Download CV" Icon={Download} />
