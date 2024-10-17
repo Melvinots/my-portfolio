@@ -25,7 +25,7 @@ const App = () => {
       </section>
       <section
         id="contact"
-        className="sm:px-16 px-8 py-16 md:py-5 bg-slate-300 scroll-mt-16"
+        className="sm:px-16 px-8 py-16 md:py-5 bg-slate-300 scroll-mt-15"
       >
         <Contact />
       </section>

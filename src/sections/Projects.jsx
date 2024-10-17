@@ -9,7 +9,7 @@ const Projects = () => {
         <h1 className="font-code font-semibold text-2xl md:text-3xl leading-tight">
           PROJECTS
         </h1>
-        <p className="font-montserrat text-lg md:text-xl text-justify py-6 leading-relaxed">
+        <p className="font-montserrat text-lg md:text-xl text-left py-6 leading-relaxed">
           In this section, you'll find a collection of my personal projects,
           focused primarily on core concepts and functionality.
         </p>

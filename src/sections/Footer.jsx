@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col space-y-4">
-            <p>Feel free to reach out for collaboration or opportunities.</p>
+            <p>Open to collaborations or opportunities? Let’s connect.</p>
             <a
               href="/my-portfolio/MelvinBonde_CV.pdf"
               download="MelvinBonde_CV.pdf"
