@@ -71,8 +71,8 @@ export const projects = [
     id: 4,
     title: "Sales Tracker",
     thumbnail: tracker,
-    github: "#home",
-    youtube: "",
+    github: "https://github.com/Melvinots/sales-tracker/tree/main",
+    youtube: "https://youtu.be/Wwle64ZoPvU",
     content: "A web application that manages and monitors sales and profits for small to medium stores by recording daily sales, tracking inventory, and visualizing data through charts.",
   }
 ];

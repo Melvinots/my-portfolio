@@ -1,7 +1,22 @@
-import { Nav } from "./components";
+import React, { useState, useEffect } from 'react';
+import { Nav, Loader } from "./components";
 import { About, Contact, Footer, Hero, Projects } from "./sections";
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <main className="relative">
       <Nav />

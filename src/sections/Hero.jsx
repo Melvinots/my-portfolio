@@ -23,7 +23,7 @@ const Hero = () => {
           </span>
           <br />
           <span className="whitespace-nowrap">
-            Aspiring Full Stack Developer
+            Aspiring Backend Developer
           </span>
         </h1>
         <div className="flex space-x-4 mt-8">

@@ -3,7 +3,7 @@ import { projects } from '../constants';
 import { ChevronLeft, ChevronRight, Link2 } from 'lucide-react';
 
 const NewCard = () => {
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
     if (currentIndex < projects.length - 1) {
@@ -35,23 +35,34 @@ const NewCard = () => {
               <span className="mr-2">GitHub</span>
               <Link2 className="w-6 h-6" />
             </a>
-            <a href={projects[currentIndex].youtube} target="_blank" rel="noopener noreferrer" className="flex items-center bg-red-100 p-2 rounded-md text-sm text-red-400 hover:text-red-600 pointer-events-none">
-              <span className="mr-2">YouTube</span>
-              <Link2 className="w-6 h-6" />
-            </a>
+            {projects[currentIndex].youtube && (
+              <a
+                href={projects[currentIndex].youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center bg-red-100 p-2 rounded-md text-sm text-red-400 hover:text-red-600"
+              >
+                <span className="mr-2">YouTube</span>
+                <Link2 className="w-6 h-6" />
+              </a>
+            )}
           </div>
         </div>
       </div>
       <div className="flex justify-evenly mt-4">
         <button
-          className="bg-[#202938] text-white px-3 py-2 rounded-full hover:bg-blue-400 focus:outline-none"
+          className={`text-white px-3 py-2 rounded-full ${
+            currentIndex === 0 ? "bg-gray-400 text-gray-500" : "bg-[#202938]"
+          }`}
           onClick={handlePrevious}
           disabled={currentIndex === 0}
         >
           <ChevronLeft />
         </button>
         <button
-          className="bg-[#202938] text-white px-3 py-2 rounded-full hover:bg-blue-400 focus:outline-none"
+          className={`text-white px-3 py-2 rounded-full ${
+            currentIndex === projects.length - 1 ? "bg-gray-400 text-gray-500" : "bg-[#202938]"
+          }`}
           onClick={handleNext}
           disabled={currentIndex === projects.length - 1}
         >
