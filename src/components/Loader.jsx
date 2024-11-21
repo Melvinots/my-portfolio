@@ -1,6 +1,4 @@
 // Pre-loader referenced from Aaron Iker
-import React, { useState, useEffect } from 'react';
-
 const Loader = () => (
   <div className="flex justify-center items-center h-screen w-full">
     <div className="loader">

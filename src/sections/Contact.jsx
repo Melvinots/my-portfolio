@@ -44,8 +44,8 @@ const Contact = () => {
   };
 
   return (
-    <section class="max-w-[1140px] w-full mx-auto p-4 md:p-8 text-center">
-      <h1 class="font-code font-semibold mb-8 text-2xl md:text-3xl leading-tight">
+    <section className="max-w-[1140px] w-full mx-auto p-4 md:p-8 text-center">
+      <h1 className="font-code font-semibold mb-8 text-white text-2xl md:text-3xl leading-tight">
         CONTACT ME
       </h1>
 

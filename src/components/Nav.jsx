@@ -1,19 +1,38 @@
-import { useState } from "react";
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.avif";
 import { navLinks } from "../constants";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const handleScroll = () => {
+    const sections = navLinks.map(item => document.getElementById(item.href.slice(1)));
+    const scrollY = window.scrollY + window.innerHeight / 2;
+
+    sections.forEach((section, index) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        setActiveSection(navLinks[index].href);
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="sticky top-0 z-50 py-3 bg-[#0b6477] text-white shadow-xl font-code">
+    <nav className="sticky top-0 z-50 py-4 bg-[#0b6477] text-white shadow-xl font-code">
       <div className="container mx-auto">
         <div className="flex items-center justify-between mx-5 lg:justify-around lg:mx-0">
           <div className="flex flex-shrink-0">
@@ -25,10 +44,14 @@ const Navbar = () => {
               />
             </a>
           </div>
-          <ul className="flex max-md:hidden ml-14 space-x-12 max-lg:space-x-4 text-sm">
+          <ul className="flex max-md:hidden ml-14 space-x-12 max-lg:space-x-4 text-[15px]">
             {navLinks.map((item, index) => (
-              <li key={index}>
-                <a href={item.href} className="py-4 px-2 hover:text-yellow-400">
+              <li key={index} className="relative">
+                <a
+                  href={item.href}
+                  className={`py-4 px-2 hover:text-yellow-400 ${activeSection === item.href ? 'text-yellow-400' : ''}`}
+                  onClick={() => setActiveSection(item.href)}
+                >
                   {item.label}
                 </a>
               </li>
@@ -45,8 +68,11 @@ const Navbar = () => {
                 <li key={index} className="py-4">
                   <a
                     href={item.href}
-                    className="px-10 hover:text-yellow-400"
-                    onClick={toggleMenu}
+                    className={`px-10 hover:text-yellow-400 ${activeSection === item.href ? 'text-yellow-400' : ''}`}
+                    onClick={() => {
+                      setActiveSection(item.href);
+                      toggleMenu();
+                    }}
                   >
                     {item.label}
                   </a>

@@ -4,7 +4,7 @@ import { Download, UserRoundPen } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="max-w-[1140px] mx-auto w-full min-h-[80vh] flex flex-col-reverse justify-center items-center space-y-10 lg:flex-row lg:space-x-36 mt-10 px-4 lg:px-8">
+    <section className="max-w-[1140px] mx-auto w-full min-h-[75vh] flex flex-col-reverse justify-center items-center space-y-10 lg:flex-row lg:space-x-36 mt-10 px-4 lg:px-8">
       <div className="relative">
         <img
           src={chess1}
@@ -17,7 +17,7 @@ const Hero = () => {
           Hi, I am
           <br />
           <span className="font-extrabold text-5xl sm:text-6xl lg:text-7xl">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-300">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-300">
               Melvin
             </span>
           </span>

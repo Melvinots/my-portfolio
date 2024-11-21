@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { projects } from '../constants';
+import { ImageModal } from './index';
 import { ChevronLeft, ChevronRight, Link2 } from 'lucide-react';
 
 const NewCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleNext = () => {
     if (currentIndex < projects.length - 1) {
@@ -17,14 +20,29 @@ const NewCard = () => {
     }
   };
 
+  const handleImageClick = (imgSrc) => { 
+    setSelectedImage(imgSrc); 
+    setShowModal(true); 
+  }; 
+  
+  const handleCloseModal = () => { 
+    setShowModal(false); 
+  };
+
   return (
     <div className="max-w-lg mx-auto mt-10">
       <div className="bg-white shadow-md rounded-lg w-full md:w-[350px] md:h-[500px]">
-        <a href={projects[currentIndex].thumbnail} target="_blank" rel="noopener noreferrer">
+        <a>
           <img
             src={projects[currentIndex].thumbnail}
             alt={`Card ${projects[currentIndex].title}`}
-            className="rounded-t-lg w-full h-40 sm:h-60 object-cover object-top"
+            className="rounded-t-lg w-full h-40 sm:h-60 object-cover object-top cursor-pointer"
+            onClick={() => handleImageClick(projects[currentIndex].thumbnail)}
+          />
+          <ImageModal 
+            show={showModal} 
+            handleClose={handleCloseModal} 
+            imgSrc={selectedImage} 
           />
         </a>
         <div className="p-4">

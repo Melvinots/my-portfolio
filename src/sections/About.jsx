@@ -18,7 +18,7 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {attainments.map(({ title, establishment, role, icon }) => (
           <Card
-            index={title} 
+            key={title}
             title={title}
             establishment={establishment}
             role={role}
