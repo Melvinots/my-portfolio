@@ -27,7 +27,7 @@ const App = () => {
       >
         <Hero />
       </section>
-      <span>
+      <span className="select-none">
         <img src={design1} alt="Splash Design" />
       </span>
       <section
@@ -36,7 +36,7 @@ const App = () => {
       >
         <About />
       </section>
-      <span>
+      <span className="select-none">
         <img src={design2} alt="Splash Design" />
       </span>
       <section
@@ -45,7 +45,7 @@ const App = () => {
       >
         <Projects />
       </section>
-      <span>
+      <span className="select-none">
         <img src={design3} alt="Splash Design" />
       </span>
       <section

@@ -49,7 +49,7 @@ export const projects = [
     thumbnail: palace,
     github: "https://github.com/Melvinots/mind_palace",
     youtube: "https://youtu.be/KYbN8I7lF18",
-    content: "A digital platform that helps users visualize, organize, and retain information by creating virtual memory spaces and using spatial mnemonics for efficient recall across various fields.",
+    content: "A digital platform that helps users visualize, organize, and retain information by creating virtual memory spaces and using spatial mnemonics for efficient recall across various use cases."
   },
   {
     id: 2,
@@ -57,7 +57,7 @@ export const projects = [
     thumbnail: tracker,
     github: "https://github.com/Melvinots/sales-tracker/tree/main",
     youtube: "https://youtu.be/Wwle64ZoPvU",
-    content: "A web application that manages and monitors sales and profits for small to medium stores by recording daily sales, tracking inventory, and visualizing data through charts.",
+    content: "A web application for managing sales and profits in small to medium stores by tracking daily transactions, monitoring inventory, and visualizing performance data and trends through charts."
   },
   {
     id: 3,
@@ -65,7 +65,7 @@ export const projects = [
     thumbnail: auction,
     github: "https://github.com/Melvinots/auction",
     youtube: "",
-    content: "An auction platform for buying and selling items with active listings, categories, real-time bidding, user comments, and a watchlist, with enhanced navigation for users.",
+    content: "An auction platform for buying and selling items featuring active listings, categorized navigation, bid tracking, user comments, user watchlists, and ability to set listings as ongoing or closed."
   },
   {
     id: 4,
@@ -73,7 +73,7 @@ export const projects = [
     thumbnail: mail,
     github: "https://github.com/Melvinots/mail",
     youtube: "",
-    content: "A single-page email client with API integration for sending, receiving, replying to, and archiving emails, offering a clean interface and streamlined functionality for managing communication."
+    content: "A single-page email client integrated with APIs for sending, receiving, replying to, and archiving emails, featuring a clean interface for streamlined communication management."
   },
   {
     id: 5,
@@ -81,9 +81,8 @@ export const projects = [
     thumbnail: social,
     github: "https://github.com/Melvinots/network",
     youtube: "",
-    content: "A platform similar to X (formerly Twitter) that enables posting text-based content, following users, and liking posts, with pagination for smooth loading and efficient navigation.",
+    content: "A platform resembling X (formerly Twitter) that supports posting text-based content, following users, liking posts, and seamless navigation with pagination for efficient user experience."
   }
-  
 ];
 
 export const toolsURL = [

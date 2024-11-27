@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { projects } from '../constants';
 import { ImageModal } from './index';
 import { ChevronLeft, ChevronRight, Link2 } from 'lucide-react';
@@ -7,6 +7,21 @@ const NewCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    const preloadImages = () => {
+      if (currentIndex > 0) {
+        const prevImg = new Image();
+        prevImg.src = projects[currentIndex - 1]?.thumbnail;
+      }
+      if (currentIndex < projects.length - 1) {
+        const nextImg = new Image();
+        nextImg.src = projects[currentIndex + 1]?.thumbnail;
+      }
+    };
+  
+    preloadImages();
+  }, [currentIndex]);
 
   const handleNext = () => {
     if (currentIndex < projects.length - 1) {

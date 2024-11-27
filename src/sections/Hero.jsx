@@ -5,7 +5,7 @@ import { Download, UserRoundPen } from "lucide-react";
 const Hero = () => {
   return (
     <section className="max-w-[1140px] mx-auto w-full min-h-[75vh] flex flex-col-reverse justify-center items-center space-y-10 lg:flex-row lg:space-x-36 mt-10 px-4 lg:px-8">
-      <div className="relative">
+      <div className="relative select-none">
         <img
           src={chess1}
           alt="Chess Piece 1"
