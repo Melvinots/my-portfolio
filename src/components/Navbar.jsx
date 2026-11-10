@@ -1,15 +1,9 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { navLinks } from "../constants/navigation";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navLinks = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
-  ];
 
   return (
     <nav className="sticky top-0 z-50 bg-white px-8 py-4">

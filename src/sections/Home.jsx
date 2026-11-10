@@ -45,7 +45,8 @@ function Home() {
       <div className="flex items-center justify-center md:justify-center">
         <div className="h-56 w-56 overflow-hidden rounded-full border-4 border-gray-100 shadow-lg sm:h-64 sm:w-64 lg:h-80 lg:w-80">
           <img
-            src="/my-portfolio/images/profile.jpg"
+            // src="/my-portfolio/images/profile.jpg"
+            src={`${import.meta.env.BASE_URL}images/profile.jpg`}
             alt="Portrait of Melvin Bonde"
             className="h-full w-full object-cover"
           />
