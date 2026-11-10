@@ -1,106 +1,52 @@
-import React, { useState } from "react";
-import { Button } from "../components";
-import { Send } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const [status, setStatus] = useState("");
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const response = await fetch("https://formspree.io/f/xjkbdoav", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      setStatus("Message sent successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } else {
-      setStatus("Failed to send the message. Please try again.");
-    }
-  };
-
+function Contact() {
   return (
-    <section className="max-w-[1140px] w-full mx-auto p-4 md:p-8 text-center">
-      <h1 className="font-code font-semibold mb-8 text-white text-2xl md:text-3xl leading-tight">
-        CONTACT ME
-      </h1>
+    <section
+      id="contact"
+      className="bg-gray-50 px-8 py-20"
+    >
+      <div className="mx-auto max-w-5xl text-center">
+        <h2 className="mb-4 inline-block border-l-4 border-[#213A57] pl-4 text-3xl font-bold">
+          Let's Connect
+        </h2>
 
-      <form
-        className="flex flex-col font-montserrat md:flex-row gap-6"
-        onSubmit={handleSubmit}
-      >
-        <div className="flex-1 flex flex-col space-y-4">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#213a57]"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            className="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#213a57]"
-            required
-          />
-          <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            value={formData.subject}
-            onChange={handleChange}
-            className="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#213a57]"
-            required
-          />
-        </div>
+        <p className="mb-8 text-lg text-gray-600">
+          Feel free to reach out if you'd like to discuss opportunities,
+          projects, or software development.
+        </p>
 
-        <div className="flex-1 flex flex-col space-y-4">
-          <textarea
-            rows="6"
-            name="message"
-            placeholder="Type your message here..."
-            value={formData.message}
-            onChange={handleChange}
-            className="border border-gray-300 p-3 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-[#213a57]"
-            required
-          />
+        <a
+          href="mailto:bonde.melvin03@gmail.com"
+          className="inline-block rounded-lg bg-[#213A57] px-7 py-3 font-semibold text-white shadow-md transition duration-200 hover:-translate-y-1 hover:bg-[#172B42] hover:shadow-lg"
+        >
+          Contact Me
+        </a>
 
-          <Button label={"Send"} Icon={Send} type="submit" />
+        <div className="mt-8 flex justify-center gap-6">
+          <a
+            href="https://github.com/Melvinots"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+            className="text-gray-600 transition hover:text-[#213A57]"
+          >
+            <Github size={26} />
+          </a>
 
-          {status && <p>{status}</p>}
-        </div>
-      </form>
+          <a
+            href="https://www.linkedin.com/in/YOUR_USERNAME"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+            className="text-gray-600 transition hover:text-[#213A57]"
+          >
+            <Linkedin size={26} />
+          </a>
+        </div>        
+      </div>
     </section>
   );
-};
+}
 
 export default Contact;
