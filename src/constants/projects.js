@@ -1,11 +1,11 @@
-import { tracker, mail, auction, social, palace } from "../assets/images";
+import { tracker, mail, auction, social, palace, financetracker } from "../assets/images";
 
 export const projects = [
   {
     id: 1,
     title: "Finance Tracker",
     featured: true,
-    image: tracker, // Replace with dedicated screenshot
+    image: financetracker,
     githubUrl: "https://github.com/Melvinots/finance-tracker",
     demoUrl: null,
     description:
@@ -16,7 +16,7 @@ export const projects = [
     id: 2,
     title: "World Explorer App",
     featured: true,
-    image: social, // Replace with dedicated screenshot
+    image: financetracker, // Replace with dedicated screenshot
     githubUrl: "https://github.com/Melvinots/world-explorer-app",
     demoUrl: null,
     description:
@@ -31,7 +31,7 @@ export const projects = [
     demoUrl: "https://youtu.be/KYbN8I7lF18",
     description:
       "A digital platform that helps users organize and retain information through virtual memory spaces and spatial mnemonics.",
-    technologies: ["Python", "Django", "JavaScript", "Bootstrap"],
+    technologies: ["Python", "Django", "JavaScript", "SQLite", "Bootstrap"],
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ export const projects = [
     demoUrl: null,
     description:
       "An online auction platform featuring item listings, category browsing, bidding, user comments, watchlists, and listing management.",
-    technologies: ["Python", "Django", "JavaScript"],
+    technologies: ["Python", "Django", "SQLite"],
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ export const projects = [
     demoUrl: null,
     description:
       "A single-page email client that supports sending, receiving, replying to, and archiving emails through API integration.",
-    technologies: ["Python", "Django", "JavaScript"],
+    technologies: ["Python", "Django", "JavaScript", "SQLite"],
   },
   {
     id: 7,
@@ -71,6 +71,6 @@ export const projects = [
     demoUrl: null,
     description:
       "A social networking application inspired by X, allowing users to create posts, follow other users, like content, and browse posts through pagination.",
-    technologies: ["Python", "Django", "JavaScript"],
+    technologies: ["Python", "Django", "JavaScript", "SQLite"],
   },
 ];

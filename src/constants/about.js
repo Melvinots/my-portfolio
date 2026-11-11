@@ -3,14 +3,6 @@ import { GraduationCap, BriefcaseBusiness } from "lucide-react";
 export const attainments = [
   {
     id: 1,
-    title: "Education",
-    establishment: "Laguna State Polytechnic University",
-    role: "BS in Computer Engineering",
-    duration: "2020 – 2024",
-    icon: GraduationCap,
-  },
-  {
-    id: 2,
     title: "Internship",
     establishment: "Creotec Philippines Inc.",
     role: "Application Development Intern",
@@ -18,6 +10,14 @@ export const attainments = [
     description:
       "Assisted in developing a mobile application for a Drone Soccer Competition scoring system.",
     icon: BriefcaseBusiness,
+  },  
+  {
+    id: 2,
+    title: "Education",
+    establishment: "Laguna State Polytechnic University",
+    role: "BS in Computer Engineering",
+    duration: "2020 – 2024",
+    icon: GraduationCap,
   },
   {
     id: 3,

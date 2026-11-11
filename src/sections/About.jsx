@@ -1,4 +1,3 @@
-
 import { attainments } from "../constants/about";
 
 function About() {
