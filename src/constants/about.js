@@ -21,10 +21,18 @@ export const attainments = [
   },
   {
     id: 3,
+    role: "Associate Software Developer",
+    establishment: "Thurston Software Solutions Inc.",
+    duration: "March 2025 – February 2026",
+    icon: BriefcaseBusiness,
+  },  
+  {
+    id: 4,
     title: "Professional Experience",
     establishment: "Thurston Software Solutions Inc.",
     role: "Junior Software Developer",
-    duration: "20 months",
+    duration: "February 2026 – Present",
+    promoted: true,
     description: [
       "Develop and maintain SQL queries and stored procedures.",
       "Perform database operations and maintenance using SQL Server Management Studio.",

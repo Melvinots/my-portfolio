@@ -3,7 +3,7 @@ import { attainments } from "../constants/about";
 
 function About() {
   return (
-    <section id="about" className="bg-gray-50 px-8 py-20">
+    <section id="about" className="bg-gray-50 px-6 py-16 md:px-8 md:py-20">
       <div className="mx-auto grid max-w-5xl items-start gap-12 md:grid-cols-2">
 
         {/* Introduction */}
@@ -12,12 +12,11 @@ function About() {
             About Me
           </h2>
 
-          <p className="text-lg leading-relaxed text-gray-600">
-            I'm a Junior Software Developer with 20 months of
-            professional experience. I primarily work with SQL Server,
-            database operations, and reporting, while continuing to
-            explore application development and modern web technologies.
-          </p>
+        <p className="text-lg leading-relaxed text-gray-600">
+          I'm a Junior Software Developer with professional experience
+          in SQL Server, database operations, and reporting. I also enjoy
+          exploring application development and modern web technologies.
+        </p>
         </div>
 
         {/* Career Journey */}
@@ -37,7 +36,15 @@ function About() {
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-gray-900">{item.role}</h4>
+                    <h4 className="flex flex-wrap items-center gap-2 font-semibold text-gray-900">
+                      {item.role}
+
+                      {item.promoted && (
+                        <span className="rounded-full bg-[#213A57]/10 px-2 py-0.5 text-xs font-medium text-[#213A57]">
+                          Promoted
+                        </span>
+                      )}
+                    </h4>
 
                     <p className="mt-1 text-sm text-gray-600">
                       {item.establishment}

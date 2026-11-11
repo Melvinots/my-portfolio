@@ -1,23 +1,11 @@
-const projects = [
-  {
-    title: "Finance Tracker",
-    image: "/my-portfolio/images/tracker.png",    
-    description:
-      "A personal finance application for tracking income, expenses, and monthly budgets.",
-    technologies: ["Blazor", "ASP.NET Core", "SQLite"],
-    githubUrl: "https://github.com/YOUR_USERNAME/FinanceTracker",
-  },
-  {
-    title: "Mind Palace",
-    image: "/my-portfolio/images/palace.png",
-    description:
-      "A web application that helps users organize and remember information using spatial mnemonics.",
-    technologies: ["Django", "JavaScript", "Bootstrap"],
-    githubUrl: "https://github.com/YOUR_USERNAME/MindPalace",
-  },
-];
+import { useState } from "react";
+import { projects } from "../constants/projects";
+import { Github, ExternalLink } from "lucide-react";
 
 function Projects() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projects : projects.slice(0, 5);
+
   return (
     <section
       id="projects"
@@ -27,11 +15,20 @@ function Projects() {
         Projects
       </h2>
 
+      <p className="mb-8 max-w-2xl leading-relaxed text-gray-600">
+        A collection of personal and academic projects showcasing my experience
+        with web development, application design, and different technologies.
+      </p>      
+
       <div className="grid items-stretch gap-6 md:grid-cols-2">
-        {projects.map((project) => (
+        {visibleProjects.map((project) => (
           <article
-            key={project.title}
-            className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-6 transition duration-200 hover:-translate-y-1 hover:shadow-md"
+            key={project.id}
+            className={`flex h-full flex-col rounded-xl border bg-white p-6 transition duration-200 hover:-translate-y-1 hover:shadow-md ${
+              project.featured
+                ? "border-[#213A57]/40 shadow-sm"
+                : "border-gray-200"
+            }`}
           >
             <img
               src={project.image}
@@ -42,7 +39,7 @@ function Projects() {
               {project.title}
             </h3>
 
-            <p className="mb-4 leading-relaxed text-gray-600">
+            <p className="mb-4 flex-grow leading-relaxed text-gray-600">
               {project.description}
             </p>
 
@@ -57,17 +54,43 @@ function Projects() {
               ))}
             </div>
 
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-auto pt-6 text-sm font-semibold text-[#213A57] transition hover:underline"
-            >
-              View on GitHub →
-            </a>            
+            <div className="mt-auto flex items-center gap-6 pt-6">
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#213A57] transition hover:text-blue-700"
+              >
+                <Github size={17} />
+                GitHub
+              </a>
+
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#213A57] transition hover:text-blue-700"
+                >
+                  <ExternalLink size={16} />
+                  View Demo
+                </a>
+              )}
+            </div>
           </article>
         ))}
       </div>
+
+      {projects.length > 5 && (
+        <div className="mt-10 text-center">
+          <button
+            onClick={() => setShowAll((current) => !current)}
+            className="rounded-lg border border-[#213A57] px-6 py-3 text-sm font-semibold text-[#213A57] transition hover:bg-[#213A57] hover:text-white"
+          >
+            {showAll ? "Show Less" : "View All Projects"}
+          </button>
+        </div>
+      )}      
     </section>
   );
 }

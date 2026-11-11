@@ -11,16 +11,17 @@ function Contact() {
           Let's Connect
         </h2>
 
-        <p className="mb-8 text-lg text-gray-600">
-          Feel free to reach out if you'd like to discuss opportunities,
-          projects, or software development.
+        <p className="mx-auto mb-8 max-w-2xl leading-relaxed text-gray-600">
+          I'm open to discussing software development opportunities,
+          collaborating on projects, and connecting with fellow developers.
+          Feel free to reach out!
         </p>
 
         <a
           href="mailto:bonde.melvin03@gmail.com"
-          className="inline-block rounded-lg bg-[#213A57] px-7 py-3 font-semibold text-white shadow-md transition duration-200 hover:-translate-y-1 hover:bg-[#172B42] hover:shadow-lg"
+          className="inline-flex items-center justify-center rounded-lg bg-[#213A57] px-6 py-3 font-semibold text-white transition hover:bg-[#172c43]"
         >
-          Contact Me
+          Get in Touch
         </a>
 
         <div className="mt-8 flex justify-center gap-6">
@@ -29,21 +30,21 @@ function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub profile"
-            className="text-gray-600 transition hover:text-[#213A57]"
+            className="text-gray-500 transition hover:text-[#213A57]"
           >
             <Github size={26} />
           </a>
 
           <a
-            href="https://www.linkedin.com/in/YOUR_USERNAME"
+            href="https://www.linkedin.com/in/melvin-bonde-8645a728b/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn profile"
-            className="text-gray-600 transition hover:text-[#213A57]"
+            className="text-gray-500 transition hover:text-[#213A57]"
           >
             <Linkedin size={26} />
           </a>
-        </div>        
+        </div>             
       </div>
     </section>
   );
