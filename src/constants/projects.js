@@ -1,4 +1,4 @@
-import { tracker, mail, auction, social, palace, financetracker } from "../assets/images";
+import { tracker, mail, auction, social, palace, financetracker, worldexplorer } from "../assets/images";
 
 export const projects = [
   {
@@ -14,9 +14,9 @@ export const projects = [
   },
   {
     id: 2,
-    title: "World Explorer App",
+    title: "World Explorer",
     featured: true,
-    image: financetracker, // Replace with dedicated screenshot
+    image: worldexplorer,
     githubUrl: "https://github.com/Melvinots/world-explorer-app",
     demoUrl: null,
     description:

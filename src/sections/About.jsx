@@ -12,9 +12,10 @@ function About() {
           </h2>
 
         <p className="text-lg leading-relaxed text-gray-600">
-          I'm a Junior Software Developer with professional experience
-          in SQL Server, database operations, and reporting. I also enjoy
-          exploring application development and modern web technologies.
+          I'm a Junior Software Developer at Thurston Software Solutions Inc., where I
+          handle backend deployments, production support, and SQL Server reporting for
+          enterprise applications. Outside work, I build web apps with Blazor and
+          React and I'm growing toward full-stack development.
         </p>
         </div>
 

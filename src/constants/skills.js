@@ -17,7 +17,7 @@ export const skillGroups = [
   },
   {
     title: "Automation & Operations",
-    skills: ["SQL Server Agent Jobs", "Windows Task Scheduler"],
+    skills: ["SQL Server Agent Jobs", "Windows Task Scheduler", "Batch Scripting"],
   },
   {
     title: "Deployment & Hosting",

@@ -42,3 +42,17 @@ export const attainments = [
     icon: BriefcaseBusiness,
   },  
 ].reverse();
+
+export const facts = [
+  {
+    label: "Currently",
+    value: "Junior Software Developer at Thurston Software Solutions Inc.",
+  },
+  {
+    label: "Focus",
+    value: "Backend and full-stack development with .NET and SQL Server",
+  },
+  { label: "Education", value: "BS Computer Engineering, LSPU (2024)" },
+  { label: "Certified", value: "Microsoft C#, Harvard CS50x, CS50 Web" },
+  { label: "Open to", value: "Junior and full-stack developer roles" },
+];

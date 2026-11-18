@@ -4,7 +4,7 @@ import { Github, ExternalLink } from "lucide-react";
 
 function Projects() {
   const [showAll, setShowAll] = useState(false);
-  const visibleProjects = showAll ? projects : projects.slice(0, 5);
+  const visibleProjects = showAll ? projects : projects.slice(0, 6);
 
   return (
     <section

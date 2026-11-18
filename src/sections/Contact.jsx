@@ -36,7 +36,7 @@ function Contact() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/melvin-bonde-8645a728b/"
+            href="https://www.linkedin.com/in/melvin-bonde/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn profile"
